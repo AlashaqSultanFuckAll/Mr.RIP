@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = '$'
+const prefix = '!'
 client.on('ready', () => {
   console.log('======================================')
   console.log(`Logged in as ${client.user.tag}!`);
@@ -46,24 +46,6 @@ client.on('message', message => {
 });
 
 
-client.on('message', message => {
-    if(message.content === '^^RepForRobben'){
-        message.channel.send('#rep <@371060496276783104>')
-    }
-});
-
-client.on('message', message => {
-    if(message.content === '^^RepForBoss'){
-        message.channel.send('#rep <@443152649899212810>')
-    }
-});
-
-client.on('message', message => {
-    if(message.content === '^^RepForAlashaq'){
-        message.channel.send('#rep <@346045919072092161>')
-    }
-});
-
 
 
 client.on('message', message => {
@@ -81,4 +63,4 @@ if (message.content === "سبام" + "<@" + `${client.user.id}` + ">") {
 });
 
 
-client.login('"MzQ2MDQ1OTE5MDcyMDkyMTYx.DpVjVA.3Y1zGLMwADCq9C2Xqa4DHtOTg3Q"');
+client.login(process.env.BOT_TOKEN);
